@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lisa & Ezéchiel — Notre histoire</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#050505;
+  color:#f7f0df;
+  font-family:'Cormorant Garamond',serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(212,175,55,.12),transparent 25%),
+    radial-gradient(circle at 85% 70%,rgba(150,0,20,.10),transparent 30%);
+}
+section{position:relative;z-index:1}
+.hero{
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; padding:40px 20px;
+  background:linear-gradient(180deg,#020202 0%,#090909 65%,#030303 100%);
+}
+.hero .rose{font-size:52px; animation:float 3s ease-in-out infinite}
+h1{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(58px,15vw,120px);
+  font-weight:400; color:#d4af37; margin:10px 0;
+  text-shadow:0 0 22px rgba(212,175,55,.25);
+}
+.date{font-size:25px;letter-spacing:4px;color:#eee0bd}
+.subtitle{font-size:22px;margin-top:20px;color:#ddd}
+.scroll{margin-top:60px;color:#d4af37;font-size:15px;letter-spacing:3px;animation:pulse 2s infinite}
+.letter{
+  max-width:850px;margin:auto;padding:90px 25px 110px;
+}
+.letter h2,.memories h2{
+  font-family:'Great Vibes',cursive;color:#d4af37;
+  font-size:58px;text-align:center;font-weight:400;margin:0 0 35px;
+}
+.letter-card{
+  border:1px solid rgba(212,175,55,.35);
+  background:rgba(255,255,255,.025);
+  padding:42px 30px;border-radius:4px;
+  box-shadow:0 0 40px rgba(212,175,55,.05);
+}
+.letter p{
+  font-size:22px;line-height:1.75;margin:0 0 20px;text-align:center;
+}
+.signature{
+  font-family:'Great Vibes',cursive;color:#d4af37;
+  font-size:45px;text-align:right;margin-top:35px;
+}
+.memories{padding:80px 20px 120px;text-align:center}
+.gallery{
+  max-width:1000px;margin:40px auto;display:grid;
+  grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.photo{
+  aspect-ratio:1/1;border:1px solid rgba(212,175,55,.35);
+  background:#101010;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;cursor:pointer;
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}
+.photo span{color:#bcae8d;font-size:20px}
+.photo small{position:absolute;bottom:8px;left:0;right:0;color:#d4af37;background:rgba(0,0,0,.55);padding:4px}.photo .replace{position:absolute;top:8px;right:8px;background:#d4af37;color:#080808;border:0;border-radius:15px;padding:5px 8px;font-size:11px;cursor:pointer}.photo input{display:none}
+input[type=file]{display:none}
+.love{
+  min-height:65vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:80px 20px;
+  background:linear-gradient(180deg,#030303,#110306,#030303);
+}
+.love h2{font-family:'Great Vibes',cursive;font-size:clamp(60px,14vw,110px);color:#d4af37;font-weight:400;margin:0}
+.love p{font-size:24px}
+.heart{font-size:40px;animation:beat 1.2s infinite}
+.edit{
+  position:fixed;right:15px;bottom:15px;z-index:20;
+  background:#d4af37;color:#080808;border:0;border-radius:30px;
+  padding:12px 18px;font-weight:700;cursor:pointer;
+}
+.panel{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);
+  z-index:30;padding:25px;overflow:auto;
+}
+.panel-inner{max-width:650px;margin:20px auto;background:#111;border:1px solid #d4af37;padding:25px}
+.panel h3{font-family:'Great Vibes';font-size:42px;color:#d4af37}
+.panel button{padding:10px 16px;margin:5px;background:#d4af37;border:0;cursor:pointer}
+.note{color:#cfc3a5;line-height:1.5}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes pulse{50%{opacity:.45}}
+@keyframes beat{50%{transform:scale(1.18)}}
+@media(max-width:800px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){
+ .gallery{grid-template-columns:1fr 1fr;gap:10px}
+ .letter-card{padding:28px 18px}
+ .letter p{font-size:19px}
+ .date{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div>
+    <div class="rose">🌹</div>
+    <h1>Lisa &amp; Ezéchiel</h1>
+    <div class="date">26 • 10 • 2023</div>
+    <div class="subtitle">Une histoire. Un amour. Une rencontre.</div>
+    <div class="scroll">↓ FAIS DÉFILER ↓</div>
+  </div>
+</section>
+
+<section class="letter">
+  <h2>Mon amour</h2>
+  <div class="letter-card">
+    <p>Tu es tout pour moi.<br>Je suis à toi pour toujours.</p>
+    <p>Une histoire, un amour, une rencontre…</p>
+    <p>Merci, mon amour, d’avoir été avec moi durant toutes ces années. Je suis plus qu’heureuse de savoir que j’ai grandi à tes côtés.</p>
+    <p>À toi, mon amour, je confie ma vie. Je prends le risque de me laisser porter par tes flots, quitte à y tomber.</p>
+    <p>Aujourd’hui, une fois de plus, je découvre avec toi ce que c’est que d’aimer et de désirer une personne. Tu es ma lumière, mon guide lorsque je me perds.</p>
+    <p>Aujourd’hui est une nouvelle page qui s’écrit pour te dire combien je t’aime et combien je tiens à toi. T’es mon essentiel, ma vie, l’homme en qui je crois et en qui je continuerai toujours à croire.</p>
+    <p>Je sais que ma vie est destinée à se finir avec toi. Je souhaite partager plus, beaucoup plus avec toi, et demeurer à jamais à tes côtés.</p>
+    <p>Je t’aime, ma vie, et merci d’être la joie qui m’accompagne chaque jour.</p>
+    <div class="signature">Lisa ❤️</div>
+  </div>
+</section>
+
+<section class="memories">
+  <h2>Nos souvenirs</h2>
+  <p>Ajoute ici vos photos ❤️</p>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<section class="love">
+  <div>
+    <div class="heart">❤️</div>
+    <h2>Je t'aime, namour !</h2>
+    <p>Pour aujourd’hui, demain et tous les jours à venir.</p>
+    <div style="font-size:35px">🌹 🤍 🌹</div>
+  </div>
+</section>
+
+<button class="edit" onclick="openPanel()">⚙ Modifier</button>
+<div class="panel" id="panel">
+ <div class="panel-inner">
+  <h3>Personnaliser notre page</h3>
+  <p class="note">Tu peux changer les noms et la date. Pour les photos, appuie simplement sur une photo puis choisis une nouvelle image : elle remplacera l’ancienne. Les photos sont conservées dans ce navigateur.</p>
+  <label>Nom 1<br><input id="name1" value="Lisa"></label><br><br>
+  <label>Nom 2<br><input id="name2" value="Ezéchiel"></label><br><br>
+  <label>Date<br><input id="date" value="26 • 10 • 2023"></label><br><br>
+  <button onclick="save()">Enregistrer</button>
+  <button onclick="closePanel()">Fermer</button>
+ </div>
+</div>
+
+<script>
+const PHOTO_COUNT=20;
+function makeGallery(){
+ const g=document.getElementById('gallery');
+ for(let n=0;n<PHOTO_COUNT;n++){
+  const label=document.createElement('label'); label.className='photo'; label.innerHTML=`<input type="file" accept="image/*" onchange="loadPhoto(this,${n})"><img id="img${n}"><span id="txt${n}">📷 Photo ${n+1}</span><button type="button" class="replace" onclick="event.preventDefault();this.parentElement.querySelector('input').click()">Remplacer</button><small>Ajouter / remplacer</small>`; g.appendChild(label);
+ }
+ loadPhotos();
+}
+function loadPhoto(input,n){
+ const file=input.files[0]; if(!file)return;
+ const maxSide=1400, quality=0.78;
+ const reader=new FileReader();
+ reader.onload=e=>{
+  const source=new Image();
+  source.onload=()=>{
+   let w=source.naturalWidth, h=source.naturalHeight;
+   const scale=Math.min(1,maxSide/Math.max(w,h)); w=Math.round(w*scale); h=Math.round(h*scale);
+   const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h;
+   canvas.getContext('2d').drawImage(source,0,0,w,h);
+   const data=canvas.toDataURL('image/jpeg',quality);
+   const img=document.getElementById('img'+n); img.src=data; img.style.display='block';
+   document.getElementById('txt'+n).style.display='none';
+   try{localStorage.setItem('lovePhoto'+n,data)}catch(err){
+     try{localStorage.removeItem('lovePhoto'+n); localStorage.setItem('lovePhoto'+n,data);}
+     catch(e){alert('Le navigateur ne peut plus stocker cette photo. Les photos déjà ajoutées restent affichées.');}
+   }
+  };
+  source.src=e.target.result;
+ };
+ reader.readAsDataURL(file);
+}
+function loadPhotos(){
+ for(let n=0;n<PHOTO_COUNT;n++){const data=localStorage.getItem('lovePhoto'+n); if(data){const img=document.getElementById('img'+n); img.src=data; img.style.display='block'; document.getElementById('txt'+n).style.display='none';}}
+}
+
+function openPanel(){document.getElementById('panel').style.display='block'}
+function closePanel(){document.getElementById('panel').style.display='none'}
+function save(){
+ const a=document.getElementById('name1').value.trim()||'Lisa'; const b=document.getElementById('name2').value.trim()||'Ezéchiel'; const d=document.getElementById('date').value.trim()||'26 • 10 • 2023';
+ document.querySelector('h1').textContent=a+' & '+b; document.querySelector('.date').textContent=d;
+ localStorage.setItem('loveName1',a); localStorage.setItem('loveName2',b); localStorage.setItem('loveDate',d); closePanel();
+}
+function loadInfo(){
+ const a=localStorage.getItem('loveName1'),b=localStorage.getItem('loveName2'),d=localStorage.getItem('loveDate');
+ if(a&&b)document.querySelector('h1').textContent=a+' & '+b; if(d)document.querySelector('.date').textContent=d;
+ if(a)document.getElementById('name1').value=a; if(b)document.getElementById('name2').value=b; if(d)document.getElementById('date').value=d;
+}
+makeGallery(); loadInfo();
+</script>
+</body>
+</html>
